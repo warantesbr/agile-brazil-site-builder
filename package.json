@@ -1,18 +1,37 @@
 {
-  "name": "temp",
-  "description": "The best project ever..",
-  "version": "0.1.0",
-  "homepage": "https://github.com/LaurentGoderre/temp",
+  "name": "agile-brazil-site",
+  "description": "Agile Brazil 2015 edition site.",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "https://agilebrazil.com/",
   "author": {
-    "name": "Laurent Goderre",
-    "url": "http://github.com/LaurentGoderre/"
+    "name": "Marco Bruno",
+    "url": "https://github.com/MarcoBruno/"
   },
+  "contributors": [
+    {
+      "name": "Cecilia Fernandes",
+      "url": "https://github.com/ceci/"
+    },
+    {
+      "name": "Gabriel Vieira",
+      "url": "https://github.com/vieiragabriel/"
+    },
+    {
+      "name": "Rafael Caceres",
+      "url": "https://github.com/rafaelcaceres/"
+    },
+    {
+      "name": "Willian Arantes",
+      "url": "https://github.com/warantesbr/"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/LaurentGoderre/temp.git"
+    "url": "git://github.com/warantesbr/agile-brazil-site"
   },
   "bugs": {
-    "url": "https://github.com/LaurentGoderre/temp/issues"
+    "url": "https://github.com/warantesbr/agile-brazil-site/issues"
   },
   "engines": {
     "node": ">=0.10"
@@ -35,15 +54,13 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/LaurentGoderre/temp/blob/master/LICENSE-MIT"
+      "url": "https://github.com/warantesbr/agile-brazil-site/blob/master/LICENSE-MIT"
     }
   ],
   "keywords": [
-    "assemble",
-    "templates",
-    "handlebars",
-    "site generator",
-    "site builder",
-    "grunt"
+    "agilebrazil",
+    "agile",
+    "event",
+    "conference"
   ]
 }
