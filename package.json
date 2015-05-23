@@ -34,9 +34,11 @@
     "url": "https://github.com/warantesbr/agile-brazil-site/issues"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=0.12"
   },
   "scripts": {
+    "preinstall": "grunt --version || npm install -g grunt-cli",
+    "start": "grunt server",
     "test": "grunt assemble"
   },
   "devDependencies": {
