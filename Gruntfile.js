@@ -69,7 +69,7 @@ module.exports = function(grunt) {
           i18n: {
             languages: [
               'en',
-              'fr'
+              'pt-BR'
             ],
             templates: [
               "src/templates/pages/**/*.hbs"
