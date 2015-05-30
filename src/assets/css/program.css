@@ -1,0 +1,103 @@
+.program {
+	background: url(../images/bg-palestre.png) no-repeat center center;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+
+	-webkit-background-attachment: fixed;
+ 	   -moz-background-attachment: fixed;
+       -o-background-attachment: fixed;
+	        background-attachment: fixed;
+
+	color: #fca027;
+
+	position: relative;
+	overflow: hidden;
+}
+
+.program .container {
+	padding-top: 2em;
+	padding-bottom: 4em;
+	background: url(../images/icon-white-vela.png) no-repeat center right;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+
+}
+
+.program-info {
+	text-align: center;
+	padding: 0 2em;
+}
+
+.program-info-title {
+	font-size: 2em;
+	line-height: 1.2em;
+	font-weight: 800;
+	margin-bottom: 0.6em;
+}
+.program-info-description {
+	font-size: 1.4em;
+	font-weight: 300;
+	margin-bottom: 0.8em;
+}
+
+.program-info .buttonAction {
+  margin: 0 auto;
+	padding: 0 2em;
+}
+
+.program-info:after {
+	clear: both;
+}
+
+@media(min-width: 768px) {
+	.program {
+
+	}
+
+	.program .container {
+		padding-bottom: 7em;
+	}
+	.program-info:before {
+		content: url(../images/speaker.png);
+		position: absolute;
+		top: 0;
+		left: -95%;
+	}
+	.program-info {
+		text-align: right;
+		padding: 0;
+
+	}
+
+	.program-info-title {
+		margin-top: 2em;
+	}
+
+	.program-info .buttonAction {
+	  margin: 0;
+		float: right;
+		padding: 0 2em;
+	}
+
+}
+@media(min-width: 992px) {
+	.program-info:before {
+		left: -70%;
+	}
+	.program-title,
+	.program-description,
+	.program .buttonAction {
+	}
+	.program:before {
+
+	}
+}
+
+
+@media(min-width: 1200px) {
+
+}
