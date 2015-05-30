@@ -74,6 +74,20 @@ module.exports = function(grunt) {
             templates: [
               "src/templates/pages/**/*.hbs"
             ]
+          },
+          permalinks: {
+            structure: ':build_filename',
+            patterns: [
+              {
+                pattern: ':build_filename',
+                replacement: function () {
+                  var original_file_name = this.filename.replace("-" + this.language + this.ext, this.ext);
+
+                  if ( this.language == 'en' ) return ":language/" + original_file_name;
+                  return original_file_name;
+                }
+              }
+            ]
           }
         },
         dest: '<%= config.dist %>/',
