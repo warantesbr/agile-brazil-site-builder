@@ -16,13 +16,15 @@ module.exports = function(grunt) {
 
     config: {
       src: 'src',
-      dist: 'dist'
+      dist: 'dist',
+      locales_src: 'src/locales/*.json',
+      locales_min: 'src/data/i18n'
     },
 
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
-        tasks: ['assemble']
+        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,json,yml}'],
+        tasks: ['transpile', 'assemble']
       },
       livereload: {
         options: {
@@ -58,9 +60,10 @@ module.exports = function(grunt) {
       pages: {
         options: {
           flatten: true,
+          data: '<%= config.src %>/data/**/*.{json,yml}',
+          helpers: ['<%= config.src %>/helpers/**/*.js'],
           assets: '<%= config.dist %>/assets',
           layout: '<%= config.src %>/templates/layouts/default.hbs',
-          data: '<%= config.src %>/data/**/*.{json,yml}',
           partials: '<%= config.src %>/templates/partials/*.hbs',
           plugins: [
             'assemble-contrib-permalinks',
@@ -106,7 +109,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: ['<%= config.src %>/data/i18n/*', '<%= config.dist %>/**/*']
 
   });
 
@@ -121,8 +124,25 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean',
     'copy',
+    'transpile',
     'assemble'
   ]);
+
+  grunt.task.registerTask('transpile', 'Minify / flat JSON translation files', function() {
+    var config = grunt.config.data.config,
+        path = require('path'),
+        dest = config.locales_min,
+        flatten = require('flat'),
+        files = grunt.file.expand(config.locales_src);
+
+    files.forEach(function(f) {
+      var p = dest + '/' + path.basename(f),
+          contents = grunt.file.readJSON(f);
+
+      grunt.file.write(p, JSON.stringify(flatten(contents)));
+      grunt.log.writeln('File "' + p + '" transpiled.');
+    });
+  });
 
   grunt.registerTask('default', [
     'build'
