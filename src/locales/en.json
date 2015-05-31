@@ -1,0 +1,10 @@
+{
+  "key1":{
+    "subkey1": "en 1.1",
+    "subkey2": "en 1.2"
+  },
+  "key2":{
+    "subkey1": "en 2.1",
+    "subkey2": "en 2.2"
+  }
+}
