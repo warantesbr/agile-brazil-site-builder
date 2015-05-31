@@ -2,7 +2,17 @@
   "aa_bar":{
     "setLang-title": "English version",
     "logoAlt": "Logo da Agile Alliance",
-    "logoLink": "http://agilealliance.org/pt/"
+    "logoLink": "http://agilealliance.org/pt/",
+    "links": [
+      {
+        "title": "Agile Alliance",
+        "url": "http://agilealliance.org/pt/"
+      },
+      {
+        "title": "Membresia",
+        "url": "http://agilealliance.org/pt/membresia/"
+      }
+    ]
   },
   "index":{
     "translated_path": "en/index.html"

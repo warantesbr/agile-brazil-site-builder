@@ -139,7 +139,7 @@ module.exports = function(grunt) {
       var p = dest + '/' + path.basename(f),
           contents = grunt.file.readJSON(f);
 
-      grunt.file.write(p, JSON.stringify(flatten(contents)));
+      grunt.file.write(p, JSON.stringify(flatten(contents, { safe: true })));
       grunt.log.writeln('File "' + p + '" transpiled.');
     });
   });

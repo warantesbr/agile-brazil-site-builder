@@ -2,14 +2,11 @@
     <header class="headerAa">
       <nav class="headerAa-menu">
         <ul class="headerAa-menu-list">
+          {{#each (i18n 'aa_bar.links')}}
           <li class="headerAa-menu-list-item">
-            <a href="http://agilealliance.org/pt/">Agile Alliance</a>
+            <a href="{{url}}">{{title}}</a>
           </li>
-
-          <li class="headerAa-menu-list-item">
-            <a href="http://agilealliance.org/pt/membresia/">Membros</a>
-          </li>
-
+          {{/each}}
           <li class="headerAa-menu-list-item logo">
             <a href="{{i18n 'aa_bar.logoLink'}}">
               <img src="assets/img/logoAgileAlliance.png" alt="{{i18n 'aa_bar.logoAlt'}}">

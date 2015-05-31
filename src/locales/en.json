@@ -2,7 +2,29 @@
   "aa_bar":{
     "setLang-title": "Versão Portugês",
     "logoAlt": "Agile Alliance Logo",
-    "logoLink": "http://agilealliance.org/"
+    "logoLink": "http://agilealliance.org/",
+    "links": [
+      {
+        "title": "Agile Alliance",
+        "url": "http://agilealliance.org/"
+      },
+      {
+        "title": "The Agile",
+        "url": "http://www.agilealliance.org/the-alliance/"
+      },
+      {
+        "title": "Events",
+        "url": "http://www.agilealliance.org/events/"
+      },
+      {
+        "title": "Resources",
+        "url": "http://www.agilealliance.org/resources/"
+      },
+      {
+        "title": "Membership",
+        "url": "http://agilealliance.org/membership/"
+      }
+    ]
   },
   "index":{
     "translated_path": "../index.html"
