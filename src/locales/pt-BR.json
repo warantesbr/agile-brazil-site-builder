@@ -1,10 +1,10 @@
 {
-  "key1":{
-    "subkey1": "pt-BR 1.1",
-    "subkey2": "pt-BR 1.2"
+  "aa_bar":{
+    "setLang-title": "English version",
+    "logoAlt": "Logo da Agile Alliance",
+    "logoLink": "http://agilealliance.org/pt/"
   },
-  "key2":{
-    "subkey1": "pt-BR 2.1",
-    "subkey2": "pt-BR 2.2"
+  "index":{
+    "translated_path": "en/index.html"
   }
 }
